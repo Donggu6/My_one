@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단일 문서에서 여러 페이지 PPT page 1 ~ 6</title>
+    <style>
+      /* 모든 페이지를 기본적으로 숨김 */
+      .page {
+        display: none;
+      }
+      /* 첫 번째 페이지는 기본적으로 보이도록 설정정 */
+      #page1 {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page1" class="page">
+      <!-- page 1. -->
+      <p>page 1</p>
+      <p>이 문서는 HTML로 작성되었습니다.</p>
+      <!-- 2 -->
+      <h1>H1 제목입니다.</h1>
+      <h2>H1 제목입니다.</h2>
+      <h3>H1 제목입니다.</h3>
+      <h4>H1 제목입니다.</h4>
+      <h5>H1 제목입니다.</h5>
+      <h6>H1 제목입니다.</h6>
+      <!-- 3 -->
+      <p>홀로서기</p>
+      <br />
+      <p>기다림은</p>
+      <p>만남을 목적으로 하지 않아도</p>
+      <p>좋다.</p>
+      <p>가슴이 아프면</p>
+      <p>아픈 채로,</p>
+      <p>바람이 불면</p>
+      <p>고개를 높이 펴들어서,날리는</p>
+      <p>아득한 미소.</p>
+      <button onclick="showPage('page2')">다음 페이지로 이동</button>
+    </div>
+    <div id="page2" class="page">
+      <p>page 2</p>
+      <!-- page 2 -->
+      <ol>
+        <li>서론</li>
+        <li>본론</li>
+        <li>결론</li>
+      </ol>
+      <ol type="a">
+        <li>석기시대</li>
+        <li>청동기 시대</li>
+        <li>철기 시대</li>
+      </ol>
+      <ol type="I">
+        <li>발단</li>
+        <li>전개</li>
+        <li>최고조</li>
+        <li>결론</li>
+      </ol>
+      <!-- 2 -->
+      <ol>
+        <li>박대희</li>
+        <li>우광섭</li>
+        <li>조기동</li>
+        <li>이승우</li>
+        <li>최봉우</li>
+      </ol>
+      <ul>
+        <li>태란</li>
+        <li>프로토스</li>
+        <li>저그</li>
+      </ul>
+      <ul>
+        <li>IE</li>
+        <li>크롬</li>
+        <li>파이어폭스</li>
+        <li>오페라</li>
+        <li>사파리</li>
+      </ul>
+      <button onclick="showPage('page1')">이전 페이지로 이동</button>
+      <button onclick="showPage('page3')">다음 페이지로 이동</button>
+    </div>
+    <div id="page3" class="page">
+      <p>page 3</p>
+      <!-- page 3 -->
+      <ol>
+        <li>
+          회사 소개
+          <ol type="a">
+            <li>대표이사 인사말</li>
+            <li>자료 현황</li>
+          </ol>
+        </li>
+        <li>
+          사업 개요
+          <ol type="a">
+            <li>
+              프로젝트 실적
+              <ul>
+                <li>무한 광고 팝업창 제작</li>
+                <li>키보드 해킹툴 제작</li>
+                <li>해킹도시 설피 솔루현현</li>
+              </ul>
+            </li>
+            <li>예상 견적적</li>
+          </ol>
+        </li>
+        <li>
+          부탁 말씀
+          <ol>
+            <li>일 좀 주세요.</li>
+            <li>열심히 하세요.</li>
+          </ol>
+        </li>
+      </ol>
+      <button onclick="showPage('page2')">이전 페이지로 이동동</button>
+    </div>
+
+    <script>
+      function showPage(pageId) {
+        document.querySelectorAll(".page").forEach((page) => {
+          page.style.display = "none";
+        });
+
+        document.getElementById(pageId).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
