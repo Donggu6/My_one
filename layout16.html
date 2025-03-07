@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        .position{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border: 1px solid black;
+            line-height: 150px;
+        }
+        #position1{background-color: blanchedalmond; left: 0;top: 0;}
+        #position2{background-color: chocolate; right: 0px; top: 0px;}
+        #position3{background-color: tomato; left: 0px; bottom: 0px;}
+        #position4{background-color: rgb(139, 139, 173); right: 0px; bottom: 0px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="position" id="position1">left:0top:0</div>
+        <div class="position" id="position2">right:0top:0</div>
+        <div class="position" id="position3">left:0bottum:0</div>
+        <div class="position" id="position4">right:0bottum:0</div>
+    </div>
+</body>
+</html>

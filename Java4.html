@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-areas:
+          "header" "sidebar"
+          "content"
+          "sideper2"
+          "footer"
+      }
+      #header {
+        background-color: red;
+        grid-area: "header";
+      }
+      #menu {
+        width: 100px;
+        background-color: blue
+        grid-area: ;
+      }
+      #content {
+        width: 100px;
+        background-color: blueviolet;
+        grid-area: "content";
+      }
+      #sidebar {
+        width: 100px;
+        background-color: aqua;
+        grid-area: "sidebar2";
+      }
+      #footer {background-color: rgb(199, 143, 69);
+        grid-area: "footer";
+      }
+      .wrapper{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-areas: 
+        "header"
+      }
+      @media screen and (min-width: 500px) {
+        #container{
+            gap: 20px;
+            grid-template-columns: 20% auto;
+            grid-template-areas:
+            "header header"
+            "sidebar1 content"
+            "footer footer"
+            grid-template-areas: ;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box header">Header</div>
+      <div class="box sidebar">Menu</div>
+      <div class="box content">
+        Main ContentMain ContentMain ContentMain ContentMain ContentMain
+      </div>
+
+      <div class="sidebar2">Sidebar2</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

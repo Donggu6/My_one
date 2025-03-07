@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 2px solid black;
+            width: 550px;
+            height: 130px;
+            position: relative;
+        }
+        #fixed,#first,#second,#thrid{
+            width: 120px;
+            height: 50px;
+        }
+        #fixed{background-color: green;position: fixed; z-index: 2;}
+        #first{background-color: aquamarine;position: absolute;left: 50px; top: 50px;}
+        #second{background-color: purple; position: absolute; left: 240px; top: 50px;}
+        #thrid{background-color: greenyellow; position: absolute; right: 30px; top: 50px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="fixed">Fixed Box</div>
+        <div id="first">First Box</div>
+        <div id="second">Second Box</div>
+        <div id="thrid">Third Bos</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      사용할 수 없는 변수명 2개 선택 주어진 변수명 중 JavaScript에서 변수명으로
+      사용할 수 없는 것을 찾겠습니다.
+    </p>
+    <p>
+      각 변수명 검토 ✅ age → 사용 가능 (문자만 포함, 정상적인 변수명) ❌ &age →
+      사용 불가능 (&는 변수명으로 사용할 수 없는 특수 문자) ❌ let → 사용 불가능
+      (let은 JavaScript의 예약어) ✅ _age → 사용 가능 (언더스코어(_)는 변수명에
+      사용할 수 있음) ❌ 1age → 사용 불가능 (변수명은 숫자로 시작할 수 없음)
+      정답: 사용할 수 없는 변수명: &age, let
+    </p>
+    <p>
+      💡 추가 설명: JavaScript 변수명은 문자(A-Z, a-z), 숫자(0-9),
+      _(언더스코어), $(달러 기호)만 사용할 수 있습니다. 숫자로 시작하면 안 되고,
+      예약어(let, const, var 등)는 변수명으로 사용할 수 없습니다.
+    </p>
+    <script>
+      let a = 1;
+      let b = 2;
+    //   console.log(a, b);
+      let c = a;
+      a = b;
+      b = c;
+      console.log(a, b);
+    </script>
+  </body>
+</html>

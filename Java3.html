@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        max-width: 1200px;
+        display: grid;
+        gap: 10px;
+      }
+      .div {
+        background-color: rgb(81, 107, 42);
+        color: white;
+        padding: 10px;
+        height: 10px;
+      }
+      @media screen and (min-width: 600px) {
+        #container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media screen and (min-width: 900px) {
+        #containar {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="div">ONE</div>
+      <div class="div">TWO</div>
+      <div class="div">THREE</div>
+      <div class="div">FOUR</div>
+      <div class="div">FIVE</div>
+      <div class="div">SIX</div>
+      <div class="div">SEVEN</div>
+      <div class="div">EIGHT</div>
+      <div class="div">NINE</div>
+      <div class="div">TEN</div>
+    </div>
+  </body>
+</html>
