@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>
+      이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에
+      있습니다.
+    </p>
+    숫자: <input type="text" name="" id="number" /><input
+      type="button"
+      onclick="guess()"
+      value="확인"
+    /><br />
+    추측횟수: <input type="text" id="count" /><br />
+    힌트: <input type="text" id="hint" />
+    <script>
+      // conputer가 생각한 숫자를 저장하기 위한 변수
+      let computer = Math.floor(Math.random() * 100) + 1;
+
+      // 추측횟수를 저장하기 위한 변수
+      let count = 0;
+
+      function guess() {
+        // 변수
+        // 내가 생각한 숫자(숫자에 입력된 값)을 저장하기 위한 변수
+        let user = document.getElementById("number").value;
+
+        // 힌트를 저장하기 위한 변수
+        let hint = "";
+        // 추측횟수를 1씩 증가
+        ++count;
+
+            hint=""
+        }
+
+        // "낮습니다.","높습니다.","정답입니다."
+        // cumputer 생각한 숫자와 내가 생각한 숫자(user)를 비교.
+        if (computer > user){
+        // hint변수가 낮습니다. 숫자를 높이세요. 라고 저장
+            hint = "낮습니다. 숫자를 높이세요.";
+        }else if(conp < user){
+        // hint변수가 높습니다. 숫자를 낮추세요. 라고 저장
+        }  else{
+            hint = "정답입니다!"
+        }
+            
+
+        
+       
+    
+        
+        // cumputer == user
+        // hint변수에 정답입니다.
+        hint = "정답입니다.";
+        // count변수에 저장되어 있는 값을 추측횟수
+      }
+    </script>
+  </body>
+</html>

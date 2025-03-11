@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Background Color</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 1s ease-in-out; /* 부드러운 배경 전환 */
+            padding-top: 50px;
+        }
+
+        #colorDisplay {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+        }
+
+        .btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            transition: background 0.3s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 랜덤 배경색 변경 🎨</h1>
+    <button class="btn" onclick="ChangeColor()">난수로 배경색 변경하기</button>
+    <button class="btn" onclick="startAutoChange()">자동 변경 시작</button>
+    <button class="btn" onclick="stopAutoChange()">자동 변경 정지</button>
+    <p id="colorDisplay">현재 색상: rgb(255,255,255)</p>
+
+    <script>
+        let intervalId = null;
+
+        function ChangeColor() {
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
+            
+            let bgColor = `rgb(${x},${y},${z})`;
+            document.body.style.background = bgColor;
+
+            // 현재 배경색 표시
+            document.getElementById("colorDisplay").innerText = `현재 색상: ${bgColor}`;
+        }
+
+        function startAutoChange() {
+            if (!intervalId) {
+                intervalId = setInterval(ChangeColor, 2000); // 2초마다 색 변경
+            }
+        }
+
+        function stopAutoChange() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    </script>
+</body>
+</html>

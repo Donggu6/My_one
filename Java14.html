@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+        function getMax(x,y){ // 7장 Exercise 09
+            
+        }
+    </script> -->
+    <script>
+      // 1~사용자가 입력한 숫자까지의 합
+      // 사용자가 입력한 숫자
+      // let number = parseInt(prompt("양수를 입력하시오."));
+      // 1~100까지의 합
+      //let sum = 0;   //100
+      //for(let i=1; i<=number; i++){
+      //    sum += i;
+      //}
+      //document.write(sum+"<br>")
+    </script>
+    <h1>팩토리얼을 계산해봅시다!!</h1>
+    <label>정수를 입력하시오</label><input type="text" id="number" /><br />
+    <input type="button" value="팩토리얼 계산" onclick="facto()" />
+    <p id="result"></p>
+    <script>
+      function facto(){
+          let gob = 1;
+        //   사용자가 입력한 정수 값 저장
+      let number = document.getElementById("number").value;
+      for(let i =number; i>=1; i--){
+          gob *= i; //gob == gob * i;
+      }
+      document.write("result").innerHTML = "정수" + number +"의 팩토리얼:" + gob;
+      }
+    </script>
+  </body>
+</html>

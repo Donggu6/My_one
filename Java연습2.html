@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    단 입력 :
+    <input  type="text" id="dan"/>
+    <input type="button" value="구구단 구하기 버튼" onclick="gugudan()" />
+    <hi id="result">2 X 1 = 2<br>2 X2 +4<br></hi>
+    <script>
+      function gugudan() {
+        let dan = document.getElementById("dan").value; //단 저장
+        for (let i = 1; i < 10; i++) {
+          // document.write(dan + "X" + i + "=" dan*1"<br>")
+          // 첫번째 for                                                                                + 2 X 1 ="<br>"
+          // document.getElementById("result").innerHTML = document.getElementById("result").innerHTML +  dan + "x" + i + "=" + dan * i + "<br>"; 
+          // 두번째 for                                     + 2 X 1 =2<br>                                                     + 2 X 1 =2<br>
+          // document.getElementById("result").innerHTML = document.getElementById("result").innerHTML +  dan + "x" + i + "=" + dan * i + "<br>";
+         
+          document.getElementById("result").innerHTML +=
+            dan + "x" + i + "=" + dan * i + "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>

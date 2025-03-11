@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="test"></h1>
+    <script>
+      // let time = new Date().getMinutes;
+      // console.log(time);
+      
+      let day = new Date().getDay()
+
+      if(day ==0 || day == 6){
+          day= "주말"
+      }
+      else{
+          day = "주중"
+      }
+      document.getElementById("test").innerHTML = "오늘은 "+ day +"입니다."
+      console.log(day);
+      // else if
+    </script>
+  </body>
+</html>

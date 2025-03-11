@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body {background-color: rgb(29, 219, 22);} */
+    </style>
+  </head>
+  <body>
+    <input type="button" value="난수로 배경색 변경하기" onclick="ChangeColor()" />
+    <script>
+    //   function ChangeColor() {
+    //     let x = Math.floor(Math.random() * 256); // 0 ~ 255 사이의 랜덤값
+    //     let y = Math.floor(Math.random() * 256); // 0 ~ 255 사이의 랜덤값
+    //     let z = Math.floor(Math.random() * 256); // 0 ~ 255 사이의 랜덤값
+    //     console.log(x)
+    //     console.log(y)
+    //     console.log(z)
+      
+
+    //   let bgColor = "rgb("+x+","+y+","+z+")";
+    //   document.body.style.background = bgColor;
+    //   }
+    function ChangeColor() {
+        let x = Math.floor(Math.random() * 256); // 0 ~ 255 사이의 랜덤값
+        let y = Math.floor(Math.random() * 256); // 0 ~ 255 사이의 랜덤값
+        let z = Math.floor(Math.random() * 256); // 0 ~ 255 사이의 랜덤값
+        console.log(x)
+        console.log(y)
+        console.log(z)
+        // 템플릿 리터럴
+        let bgColor = `rgb(${x},${y},${z})`;
+        document.body.style.background = bgColor;
+    }
+    </script>
+  </body>
+</html>
