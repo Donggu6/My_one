@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>String 객체</h1>
+
+    ID : <input type="text" id="id" />
+    <label id="id2">ID는 8 ~ 12자로 입력하셔야 합니다.</label><br />
+    PW : <input type="password" id="pw" />
+    <labal>PW는 10~20자로 입력하셔야 합니다.</labal><br />
+    PW재확인 : <input type="password" id="repw" />
+    <label>PW와 PW재확인의 글자가 일치해야 합니다.</label><br />
+    <input type="button" value="확인" onclick="confirm()" />
+    <script>
+      function confirm() {
+        let id = document.getElementById("i");
+        if (id.value.length >= 8 && id.value.length <= 12) {
+          id2.innerHTML = "ID로 적합합니다.";
+          id2.style.color = "blue";
+        } else {
+          id2.innerHTML = "ID 다시 입력하세요.";
+        }
+        id2.style.color = "red";
+      }
+        let id2 = document.getElementById("id2");
+        if (id.value.length >= 8 && id.value.length <= 12) {
+          id2.innerHTML = "ID로 적합합니다.";
+          id2.style.color = "blue";
+        } else {
+          id2.innerHTML = "ID 다시 입력하세요.";
+        }
+        id2.style.color = "red";
+      }
+      if(pw.value == repw.value){
+
+      }
+    </script>
+  </body>
+</html>

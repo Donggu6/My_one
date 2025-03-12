@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    구입날짜: 
+    <label for="purchaseDate">구입날짜:</label>
+    <input type="date" id="purchaseDate" />
+    <button onclick="shop()">확인</button>
+    <p id="message"></p> <!--결과 메세지를 출력할 영역-->
+    <script>
+        function shop(){
+            let input = document.getElementById("purchaseDate").value; // 입력한 날짜 가져오기
+            let message = document.getElementById("message"); // 결과 메세지를 표시할 요소
+
+            if(input === "") { // 날짜가 선택되지 않은 경우
+                message.innerHTML = "날짜를 선택하세요.";
+                message.style.color="red";
+            }else{
+                let purchaseDate = new Date(input); // 구입 날짜 객체 생성
+                let now = new Date();
+
+                let diffTime = now - purchaseDate; // 현재 날짜와 구입 날짜 차이(밀리초 단위)
+                let diffDay = diffTime / (1000 * 60 * 60 * 24); // 일 단위로 변환
+
+                if (diffDay > 30) {
+                    message.innerHTML = "유효 기간이 지났습니다.";
+                    message
+                }else{
+                    message.innerHTML = "교환이 가능합니다.";
+
+                }
+            }
+        }
+    </script>
+
+  </body>
+</html>

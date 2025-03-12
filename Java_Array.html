@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+        // 변수
+        let engScore = 10;
+        //리터럴로 배열 생성
+        // let korScore = [60, 74, 93, 88, 83]
+        // Array객체로 배열 생성
+        let korScore = new Array(60, 74, 93, 88, 83,78);
+
+      //   console.log(korScore);
+      //   console.log(korScore);
+      //   console.log(korScore[0]);
+      //   console.log(korScore[1]);
+      //   console.log(korScore[2]);
+      //   console.log(korScore[3]);
+      //   console.log(korScore[4]);
+      let sum = 0;
+        for(let i = 0; i < korScore.length; i++){
+          console.log(korScore[i]);
+          sum += korScore[i]; //sum= sum + koScore
+        }
+        document.getElementById("result").innerHTML = "총점 :"+sum+"<br>"+korScore.length;
+    </script>
+  </body>
+</html>
