@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    구입날짜: <input type="date" id="pdate" />
+    <input type="button" value="검사" onclick="pdate()" />
+    <script>
+      function pdate() {
+        // 현재날짜
+        let today = new Date();
+
+        // 구입날짜 (ex 2025/02/15)
+        let pay = document.getElementById("pdate").value;
+        let pdate = new Date(pay);
+        
+        //현재날짜 - 구입날짜
+        let diff = today.getTime() - pdate.getTime();
+        let diff_days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        // console.log(diff_days);
+
+        if(diff_days > 30){
+          alert("교환 기간이 지났습니다.")
+        }else{
+          alert("교환 가능합니다.")
+        }
+      }
+    </script>
+  </body>
+</html>
