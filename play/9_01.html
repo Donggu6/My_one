@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <a>dd</a> -->
+    <!-- <a> 요소노드 || dd 택스트 노드 -->
+    <!-- id로 HTML 요소 찾기
+         id -> getelementById
+         x = document.getElementsTagName("p") -->
+    <!-- <p id="a">첫번째 p태그</p>
+    <p id="a">두번째 p태그</p>
+    <p id="a" class="b">세번째 p태그</p>
+    <p id="a" class="b">네번째 p태그</p>
+    <p id="a" class="b">다섯번째 p태그</p>
+    <p id="a" class="b">여섯번째 p태그</p>
+    <p id="a" class="b">일곱번째 p태그</p>
+    <p id="a" class="b">여덟번째 p태그</p>
+    <p id="a">아홉번쩨 p태그</p>
+    <p id="a">열번째 p태그</p> -->
+    <script>
+      //id선택자 : 변수 저장
+      //   let a = document.getElementById("a");
+      //   console.log(a);
+      //   let p = document.getElementsByTagName("p");
+      //   console.log(p);
+      //class와 태그선택자 : 배열 저장
+      //   let p = document.getElementsByTagName("p");
+      //   console.log(p[1])
+      //   console.log(p[2])
+      //   console.log(p[3])
+      //   console.log(p[4])
+      //   console.log(p[5])
+      //   console.log(p[6])
+      //   console.log(p[7])
+      //   console.log(p[8])
+      //   console.log(p[9])
+      //   let b = document.getElementsByClassName("b");
+      //   console.log(b);
+      //
+    </script>
+
+    <div>
+      <p>과일들의 리스트</p>
+      <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+      </ul>
+    </div>
+    <script>
+      let myDiv = document.getElementsByTagName("div")[0];
+      let firstchild = myDiv.firstchild;
+      let lastchild = myDiv.lastchild;
+      console.log(firstchild);
+    </script>
+  </body>
+</html>

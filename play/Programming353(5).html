@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // fruit = ["apple","banana","melon"]
+      // fruit[1]; //banana
+      // fruit.indexOf("banana")
+
+      function check(str) {
+        let strLower = str.toLowerCase()
+        return strLower.indexOf("xxx") >= 0
+        // return str.indexOf("XXX") >= 0 || str.indexOf("xxx") >= 0;
+      }
+
+      document.write("check('buy XXX now') -> " + check("buy XXX now")) ;
+    </script>
+  </body>
+</html>

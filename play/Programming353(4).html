@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function strCap(str) {
+        // 대소문자 변환
+        //toLowerCase() :소문자 변환
+        //toUpperCase() :대문자 변환
+        // console.log(str.substring(1));
+        return str.charAt(0).toUpperCase() + str.substring(1);
+      }
+      document.write("hong -> "+strCap("hong"));
+
+    </script>
+  </body>
+</html>

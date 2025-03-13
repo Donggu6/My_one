@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // 사용자를 나타내는 객체
+        //객체(속성,메소드)
+        let user = {
+            name:"Kim",
+            age: 20,
+            password:"1234"
+        }
+        let txt = "";
+
+        for(let x in user){
+            txt +=user[x]+" ";
+        }
+        document.write(txt)
+    </script>
+  </body>
+</html>
