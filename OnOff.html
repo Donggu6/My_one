@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="../image/off.png" width="100px" height="100px" onclick="button()">
+    <p>스위치를 클릭하여 보세요!</p>
+    <script>
+        function button(){
+            let img = document.getElementById("img");
+            if(img.src.includes("off.png")){
+                img.src = "../image/on.jfif";
+            }else{
+                img.src = "../image/off.png";
+            }
+        }
+    </script>
+</body>
+</html>

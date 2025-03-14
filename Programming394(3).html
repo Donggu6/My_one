@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="text">
+      Javascript로 문단의 폰트, 글자 크기, 색상을 변경할 수 있나요?
+    </p>
+    <input type="button" value="스타일 변경" onclick="changeStyle()" />
+    <script>
+      function changeStyle() {
+        let text = document.getElementById("text");
+        text.style.fontSize = "15pt";
+        text.style.color = "blue";
+        text.style.background = "red";
+      }
+    </script>
+  </body>
+</html>

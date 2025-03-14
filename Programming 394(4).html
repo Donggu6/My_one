@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>입력한 문자열을 출력해보세요.</p>
+    이름 : <input type="text" id="name" /><br />
+    주소 : <input type="text" id="addr" /><br />
+    <input type="button" value="출력" onclick="output()" /><br />
+    <p id="result">결과는 여기에 표시하세요.</p>
+    <script>
+      function output() {
+        let name = document.getElementById("name"); //id를 이용한 선택
+        let addr = document.getElementById("addr"); //id를 이용한 선택
+        // let name = document.getElementById("input")[0]; //Tag를 이용한 선택
+        // let addr = document.getElementById("input");[1] //Tag를 이용한 선택
+        // let name = document.queryselector("name"); //id를 이용한 선택
+        // let name = document.queryselector("name"); //id를 이용한 선택
+        // let name = document.queryselectorAll("input")[0]; //Tag를 이용한 선택
+        // let name = document.queryselectorAll("input")[0]; //Tag를 이용한 선택
+
+        document.querySelector("#result").innerHTML =
+          name.value + "<br>" + addr.value;
+      }
+    </script>
+  </body>
+</html>

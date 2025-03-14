@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style1{
+            background-color: rgb(89, 65,199);
+            color: aliceblue;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sub()">요소에 클래스 추가</button>
+    <div id="spesial">
+        <p>This is a paragraph.</p>
+    </div>
+    <script>
+        function sub(){
+            document.getElementById("spesial").classList.add("style1");
+            // document.getElementById("special").classlist.toggle("style");
+            // 만약 위의 코드에서 add()대신에 주석과 같이 toggle()을 사용한다면 클래스 지정이 토글된다.즉, style1 클래스 지정이 토글된다. 많이 사용하는 기능이다.
+        }
+    </script>
+</body>
+</html>
