@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // href 속성이 있는 모든 요소의 글자색을 빨간색으로 변경
+        $("[href]").css("color", "red");
+
+        // href 속성이 'https://www.naver.com/'이 아닌 요소의 배경색을 회색으로 변경
+        $("[href!='https://www.naver.com/']").css("background-color", "grey");
+
+        // src 속성이 .jpg로 끝나는 이미지를 선택하여 크기 조정
+        $("[src$='.jpg']").css({ width: "100px", height: "100px" });
+
+        // title 속성이 '구글'로 시작하는 요소의 글자색과 글자 크기 변경
+        $("[title^='구글']").css({ color: "yellow", "font-size": "20pt" });
+
+        // title 속성에 '으로'가 포함된 요소의 글자를 볼드체로 변경
+        $("[title*='으로']").css("color", "blue ㅏ");
+      });
+    </script>
+  </head>
+  <body>
+    <a href="https://www.naver.com/" title="네이버로 이동합니다"
+      >네이버로 이동</a
+    >
+    <a href="https://www.google.co.kr/?gws_rd=ssl" title="구글로 이동합니다."
+      >구글로 이동</a
+    >
+    <a href="https://www.coupang.com/" title="쿠팡으로 이동합니다"
+      >쿠팡으로 이동</a
+    >
+    <img src="../image/coding-1.webp" alt="" width="150" />
+    <img src="../image/coding.jpg" alt="" width="200" />
+  </body>
+</html>

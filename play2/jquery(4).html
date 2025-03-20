@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        // input값 가져오기 버튼을 클릭하면
+        $("#btnNo").on("click",function(){
+            // input 태그에 있는 값을 h1태그의 내용으로 출력
+            $("#result").text($("#num1").val())
+            // $("num1").val(10)
+        })
+      }) 
+    </script>
+  </head>
+  <body>
+     <input type="text" id="num1" />
+    <input type="button" id="btnNo" value="input값 가져오기 버튼" />
+    <h1 id="result">innerHTML 영역</h1>
+  <!--  <script>
+        // javascript로 하기
+        let btn = document.getElementById("btnNo");
+        let number = document.getElementById("num1");
+        let result = document.getElementById("result");
+
+        btn.addEventListener("click",function(){ // input값 가져오기 버튼 클릭하면
+        result.innerHTML= number.value;
+        }) -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>글자수 세기</h1>
+    <textarea cols="20" rows="10" id="content"></textarea>
+    <h1 id="result">입력문자수:</h1>
+    <script>
+      let content = document.getElementById("content");
+      let result = document.getElementById("result");
+      content.addEventListener("keyup", function () {
+        result.innerHTML = "입력문자수: " + content.value.length;
+      });
+    </script>
+  </body>
+</html>

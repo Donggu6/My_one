@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            // h1 태그 스타일 지정 (이 부분을 document.ready 안으로 이동)
+            $("h1").css({ "background-color": "red", "color": "yellow" });
+
+            // p 태그를 선택하여 글자색을 빨간색으로 변경
+            $("p").css("color", "red");
+            // document.getElementsByTagname("p"),style.color="red" :javascript
+            // id가 'a'인 요소의 배경색을 노란색으로 변경
+            $("#a").css("background-color", "yellow");
+            // document.getElementsByTagname("a"),style.color="red" :javascript
+            //class가 a인 것을 선택하여 배경색(background-color)을 파란색(blue),
+            //글자색(color)을 흰색(white), 글자크기(font-size)는 15pt으로 지정
+            // class가 'a'인 요소의 스타일 지정
+            $(".a").css({
+                "background-color": "blue",
+                "color": "white",
+                "font-size": "15pt"
+            });
+        });
+        $("p:nth-child(3)").css("font-style",it)
+        // document.getElementsByClassName("a"),style.backgroundcolor="red" :javascript
+    </script>
+</head>
+<body>
+    <h1>제목 태그 입니다.</h1>
+    <p>p태그 입니다.</p>
+    <p id="a">id가 a인 p태그 입니다.</p>
+    <p class="a">class가 a인 p태그 입니다.</p>
+    <p class="a">class가 a인 p태그 입니다.</p>
+    <p class="a">class가 a인 p태그 입니다.</p>
+</body>
+</html>

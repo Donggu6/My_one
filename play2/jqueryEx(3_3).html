@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("ul li").each(function (index, value) {
+          console.log("인덱스 : "+index+",값 : " +$(value).text());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>오랜지</li>
+    </ul>
+  </body>
+</html>

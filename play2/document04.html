@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>1. +연산</h1>
+    <input type="text" id="firstNumber" />+
+    <input type="text" id="secondNumber" />=
+    <input type="text" id="result" />
+    <input type="button" value="연산" id="btnOp" />
+
+    <h1>2. 총합 구하기</h1>
+    <label>가격</label>
+    <input type="text" id="price" />X
+    <label>수량</label>
+    <select id="quantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    = 총합 <span id="total1">0</span>원
+
+    <h1>3. 총합 구하기2(선택된 값만)</h1>
+    바나나(1000원)<input type="checkbox" name="fruits" value="1000" /><br />
+    사과(500원)<input type="checkbox" name="fruits" value="500" /><br />
+    배(1500원)<input type="checkbox" name="fruits" value="1500" /><br />
+    <input type="button" value="총합구하기" id="btntotal" />
+    <label id="total2">선택한 가격: 0원</label>
+
+    <script>
+      let btnOp = document.getElementById("btnOp");
+      let firstNo = document.getElementById("firstNumber");
+      let secondNo = document.getElementById("secondNumber");
+      let result = document.getElementById("result");
+
+      btnOp.addEventListener("click", function () {
+        result.value = parseInt(firstNo.value) + parseInt(secondNo.value);
+      });
+
+      let price = document.getElementById("price");
+      let quantity = document.getElementById("quantity");
+      let total1 = document.getElementById("total1");
+
+      quantity.addEventListener("change", function () {
+        total1.innerText = price.value * quantity.value + "원";
+      });
+
+      let btntotal = document.getElementById("btntotal");
+      let fruits = document.getElementsByName("fruits");
+      let total2 = document.getElementById("total2");
+
+      btntotal.addEventListener("click", function () {
+        let sum = 0;
+        for (let i = 0; i < fruits.length; i++) {
+          if (fruits[i].checked) {
+            sum += parseInt(fruits[i].value);
+          }
+        }
+        total2.innerText = "선택한 가격: " + sum + "원";
+      });
+    </script>
+  </body>
+</html>

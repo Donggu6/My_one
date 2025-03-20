@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(":input").css("background-color","red")
+            //            
+            $(":text").css("background-color","yellow")
+            $(":password").css("border-width","10px")
+            $(":radio").css("width","100px")
+            $(":checkbox").css("width","100px")
+            $(":image").css("width","300px")
+            $(":file").css("background","blue")
+            $(":submit").css("background","green")
+            $(":reset").css("background","#FF007F")
+            $(":button").css("background","#4C4C4C")
+
+        })
+    </script>
+</head>
+<body>
+    <form accept="a">
+        <input type="text"><br>
+        <input type="password"><br>
+        <input type="radio"><br>
+        <input type="checkbox"><br>
+        <input type="image" src="../image/brid.jfif" ><br>
+        <input type="file"><br>
+        <input type="submit" value="submit"><br>
+        <input type="reset"><br>
+        <input type="button" value="button"><br>
+    </form>
+</body>
+</html>

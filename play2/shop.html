@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>갯수</label>
+    <input type="text" id="count" value="1" />
+    <input type="button" id="add" value="+" />
+    <input type="button" id="minus" value="-" />
+    <script>
+      let btnplus = document.getElementById("add"); // +버튼 가져오기
+      let btnminus = document.getElementById("minus");
+      let count = document.getElementById("count"); // 사용자 값 입력 input
+      // +버튼을 클릭하면
+      btnplus.addEventListener("click", function () {
+        // 갯수는 1씩 증가
+        count.value = ++count.value;
+      });
+      // -버튼을 클릭하면
+      // 갯수는 1씩 감소
+      btnminus.addEventListener("click", function () {
+        // 갯수는 1씩 증가
+        if(count.value==1){
+            count.value = --count.value;
+        }
+        else{
+            count.value = --count.value;
+        } 
+      });
+    </script>
+  </body>
+</html>

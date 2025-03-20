@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("table").css({"border":"2px solid black","border-collapse":"collapse"})
+            $("tr td").css("border","2px solid black")
+            $("tr:frist").css("background-color","black")
+        })
+    //   $(document).ready(function () {
+    //     $("table").css({"border":"2px solid black","border-collapse":"collapse","width":"300px","height":"300px","text-align":"center"})
+    //     $("tr td").css("border","1px solid black")
+    //     $("tr:even").css("background-color", "orange");
+    //   });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>이름</td>
+        <td>주소</td>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>서울시</td>
+      </tr>
+      <tr>
+        <td>이순신</td>
+        <td>제주도</td>
+      </tr>
+      <tr>
+        <td>왕건</td>
+        <td>경기도</td>
+      </tr>
+    </table>
+  </body>
+</html>

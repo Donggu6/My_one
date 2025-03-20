@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 비활성화
+        $("input:disabled").css("background-color", "red");
+        // 활성화
+        $("input:enabled").css("background-color", "yellow");
+        // 커서가 있을 때
+        setInterval(function () {
+          $("input:focus").css("border-color", "blue");
+        }, 100);
+        // $("input:focus").css("border-color", "blue");
+        // $(this).css("border-color", "blue");
+        $("select").on("change", function () {
+          console.log($("select option:selected").val());
+        });
+        // input태그 중에서도, type이 checkbox인 것을 선택하여, css
+        $("input[type='checkbox']").on("change", function () {
+            //check 안된건 초기화
+            $("input[type='checkbox'] + label").css("background-color","")
+            // check 된건 녹색 배경으로
+          $("input[type='checkbox']:checked + label").css(
+            "background-color",
+            "green"
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" disabled /><br />
+      <input type="text" /><br />
+      <input type="text" /><br />
+      <select>
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option></select
+      ><br />
+      <input type="checkbox" id="ck1" name="hobby" value="soccer" /><label for="ck1"
+        >축구</label
+      ><br />
+      <input type="checkbox" id="ck2" name="hobby" value="basketball" /><label for="ck2"
+        >농구</label
+      ><br />
+      <input type="checkbox" id="ck3" name="hobby" value="baseball" /><label for="ck3"
+        >야구</label
+      ><br />
+    </form>
+  </body>
+</html>
