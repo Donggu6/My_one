@@ -1,0 +1,50 @@
+<!-- <input type="button" value="확인">
+$("input:button").on("click",function(){})
+$("input:button").click(function(){}) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .reverse {
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("#header0").on("click",function(){
+        $("h1").on("click", function () {
+          $(this).html(function (index, html) {
+            return html + "+"; //+ alert("header");
+          });
+        });
+        // $("h1").on({ // on() 매서드를 이용한 이벤트 연결
+        // "mouseenter":function(){ // 마우스 올렸을 대
+        //     $(this).addClass("reverse") //내가 선택한 h1(this)에 class="reverse"를 추가
+        // },
+
+        // "mouseleave":function(){ // 마우스 벗어났을 대
+        //     $(this).removeClass("reverse") //내가 선택한 h1(this)에 class="reverse"를 추가
+        // }
+        // })
+        $("h1").hover( // 이벤트 연결 메소드
+          function () {
+            $(this).addClass("reverse"); // 마우스 올렸을때
+          },
+          function () {
+            $(this).removeClass("reverse"); // 마우스 벗어났을 때
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="header0">header-8</h1>
+    <h1 id="header">header-6</h1>
+    <h1 id="header">header-7</h1>
+  </body>
+</html>

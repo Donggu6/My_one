@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, a{
+            margin: 5px; padding: 5px;
+            border: 3px solid black;
+        }
+    </style>
+    <script src="../Javascript/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("a").click(function(event){
+            $(this).css("background","blue")
+            // a태그가 가지고 있는 기본 이벤트(click)을 재거
+            // event.preventDefault();
+            // event.stopPropagation()
+        })       
+         $("h1").click(function(){
+            $(this).css("background","red")
+        })
+    })
+</script>
+</head>
+<body>
+    <!-- <h1>
+        <a href="https://www.naver.com" target="_blank">네이버</a>
+    </h1> -->
+    <h1>
+        <a href="https://www.naver.com">네이버</a>
+    </h1>
+</body>
+</html>
