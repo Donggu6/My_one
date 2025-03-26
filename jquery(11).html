@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/Javascript/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          // show 버튼을 클릭하면 div 내용 보여주기
+          $("#showbtn").on("click",function(){
+            // show(지속시간, 효과, 후처리)
+              $("#effect").show(5000,"linear",function(){
+                alert("show 효과가 끝난 후 alert로 콜백")
+              })
+          })
+          // hide 버튼을 클릭하면 div 내용 숨기기
+          $("#hidebtn").on("click",function(){
+            // hide(지속시간, 효과, 후처리)
+
+              $("#effect").hide(5000,"swing")
+
+          })
+          // toggle 버튼을 클릭 할 때마다 div 내용 보였다가 숨기기
+          $("#togglebtn").on("click",function(){
+            // toggle(지속시간, 효과, 후처리)
+
+              $("#effect").toggle(5000,"swing")
+
+          })
+      })
+    </script>
+  </head>
+  <body>
+    <input type="button" value="show" id="showbtn" />
+    <input type="button" value="hide" id="hidebtn" />
+    <input type="button" value="toggle" id="togglebtn" />
+    <div id="effect">
+      <h1>안녕하세요.</h1>
+      <p>저는 홍길동입니다.</p>
+    </div>
+  </body>
+</html>
